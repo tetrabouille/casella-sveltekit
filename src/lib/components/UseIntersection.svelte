@@ -6,6 +6,7 @@
 	export let bottom = 0;
 	export let left = 0;
 	export let right = 0;
+	export let className = '';
 
 	let intersecting = false;
 	let container: HTMLElement;
@@ -30,13 +31,6 @@
 	});
 </script>
 
-<div bind:this={container}>
+<div bind:this={container} class={className}>
 	<slot {intersecting} />
 </div>
-
-<style>
-	div {
-		height: 100%;
-		width: 100%;
-	}
-</style>
