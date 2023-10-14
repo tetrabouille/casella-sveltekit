@@ -9,7 +9,7 @@
 </script>
 
 <header
-	class="h-64 md:h-44 transition-all duration-500 flex justify-center items-center sticky top-0 px-8 overflow-hidden isolate z-50"
+	class="h-64 transition-all duration-500 flex justify-center items-center sticky top-0 px-8 overflow-hidden isolate z-50"
 	class:-translate-y-24={compact}
 >
 	<div class="container flex justify-between items-center">
@@ -86,28 +86,31 @@
 		<div
 			in:fly={{ y: 100, duration: 250 }}
 			out:fly={{ y: 100, duration: 250, delay: 200 }}
-			class="absolute inset-0 -z-10 flex justify-center"
+			class="absolute inset-0 -z-10 bg-sky-900"
 		>
 			<Image
 				src={import('$lib/assets/sunset_3.jpeg')}
 				brightness={1.25}
 				alt="plage header background"
-				offsetY={195}
-				minWidth="1400px"
+				offsetY={500}
+				offsetRatioModifier={1}
+				className="h-full w-full"
+				minWidth={1000}
 			/>
 		</div>
 	{:else}
 		<div
 			in:fly={{ y: -100, duration: 250 }}
 			out:fly={{ y: -100, duration: 250, delay: 200 }}
-			class="absolute inset-0 -z-10 flex justify-center opacity-60"
+			class="absolute inset-0 -z-10 bg-amber-100"
 		>
 			<Image
 				src={import('$lib/assets/landscape_2.jpeg')}
 				brightness={1.15}
 				alt="landscape header background"
-				offsetY={130}
-				minWidth="1400px"
+				offsetY={200}
+				className="h-full w-full"
+				minWidth={1400}
 			/>
 		</div>
 	{/if}
