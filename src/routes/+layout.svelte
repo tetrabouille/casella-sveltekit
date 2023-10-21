@@ -27,8 +27,6 @@
 	/>
 	<Header {compact} />
 	<slot />
-
-	<div class="mt-[1000px]" />
 </div>
 
 <style lang="scss">
