@@ -2,8 +2,11 @@
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+
+	import { t } from '$lib';
 	import Image from '$lib/components/Image.svelte';
 	import Corsica from '$lib/components/svg/Corsica.svelte';
+	import SelectLanguage from '$lib/components/SelectLanguage.svelte';
 
 	export let compact = false;
 </script>
@@ -14,66 +17,69 @@
 >
 	<div class="container flex justify-between items-center">
 		<div
-			class="transition-container flex flex-col md:flex-row duration-500 items-center gap-2 md:gap-6 cursor-pointer z-10"
+			class="transition-container duration-500 z-10"
 			class:scale-[0.8]={compact}
 			class:translate-x-[-1rem]={compact}
 			class:translate-y-12={compact}
 			class:text-white={compact}
-			role="button"
-			aria-label="Go to home page"
-			tabindex="0"
-			on:click={() => {
-				goto('/');
-			}}
-			on:keydown={(event) => {
-				if (event.key === 'Enter' || event.key === ' ') {
-					goto('/');
-				}
-			}}
 		>
-			<Corsica class="transition-all duration-100" />
-			<div class="flex flex-col items-center md:items-start">
-				<span class="font-header transition-all duration-100 text-xl sm:text-2xl leading-tight"
-					>Villa</span
-				>
-				<span class="font-header transition-all duration-100 text-3xl sm:text-5xl leading-tight"
-					>Casella</span
-				>
+			<div
+				class="flex flex-col md:flex-row items-center gap-2 md:gap-6 cursor-pointer"
+				aria-label="Go to home page"
+				tabindex="0"
+				role="button"
+				on:click={() => {
+					goto('/');
+				}}
+				on:keydown={(event) => {
+					if (event.key === 'Enter' || event.key === ' ') {
+						goto('/');
+					}
+				}}
+			>
+				<Corsica class="transition-all duration-100" />
+				<div class="flex flex-col items-center md:items-start">
+					<span class="font-header transition-all duration-100 text-xl sm:text-2xl leading-tight"
+						>Villa</span
+					>
+					<span class="font-header transition-all duration-100 text-3xl sm:text-5xl leading-tight"
+						>Casella</span
+					>
+				</div>
 			</div>
 		</div>
 
-		<nav
-			class="transition-container duration-500 md:opacity-100 items-end gap-2 md:gap-10 z-10 flex md:flex flex-col md:flex-row font-header text-2xl leading-10"
-			class:translate-y-12={compact}
+		<div
+			class="transition-container duration-500 md:opacity-100 z-10 relative"
 			class:md:text-white={compact}
 			class:opacity-0={compact}
 			class:opacity-100={!compact}
+			class:translate-y-12={compact}
 		>
-			<a
-				href="/"
-				class="transition-all pointer-events-none md:pointer-events-auto"
-				class:text-4xl={$page.url.pathname === '/'}
-				class:pointer-events-auto={!compact}>Home</a
+			<nav
+				class="items-end gap-2 md:gap-10 flex md:flex flex-col md:flex-row font-header text-2xl leading-10"
 			>
-			<a
-				href="/activities"
-				class="transition-all pointer-events-none md:pointer-events-auto"
-				class:text-4xl={$page.url.pathname === '/activities'}
-				class:pointer-events-auto={!compact}>Activities</a
-			>
-			<a
-				href="/rules"
-				class="transition-all pointer-events-none md:pointer-events-auto"
-				class:text-4xl={$page.url.pathname === '/rules'}
-				class:pointer-events-auto={!compact}>Rules</a
-			>
-			<a
-				href="/about"
-				class="transition-all pointer-events-none md:pointer-events-auto"
-				class:text-4xl={$page.url.pathname === '/about'}
-				class:pointer-events-auto={!compact}>About</a
-			>
-		</nav>
+				<a
+					href="/"
+					class="transition-all pointer-events-none md:pointer-events-auto"
+					class:text-4xl={$page.url.pathname === '/'}
+					class:pointer-events-auto={!compact}>{$t('HOME')}</a
+				>
+				<a
+					href="/activities"
+					class="transition-all pointer-events-none md:pointer-events-auto"
+					class:text-4xl={$page.url.pathname === '/activities'}
+					class:pointer-events-auto={!compact}>{$t('ACTIVITIES')}</a
+				>
+				<a
+					href="/about"
+					class="transition-all pointer-events-none md:pointer-events-auto"
+					class:text-4xl={$page.url.pathname === '/about'}
+					class:pointer-events-auto={!compact}>{$t('ABOUT')}</a
+				>
+			</nav>
+			<SelectLanguage {compact} />
+		</div>
 	</div>
 
 	<div

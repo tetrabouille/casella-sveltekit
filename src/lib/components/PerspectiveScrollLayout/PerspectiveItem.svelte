@@ -7,8 +7,6 @@
 
 	const { getMinHeight, heights, setMinHeight, depth } = getContext();
 
-	$: console.log('PerspectiveItem', $depth);
-
 	let elementRef: HTMLDivElement;
 	$: depthRatio = isBackground ? $depth + 1 : 1;
 	$: clientHeight = elementRef?.clientHeight || 0;

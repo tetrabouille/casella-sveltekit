@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getContext, initContext } from './PerspectiveScrollLayout.context';
+	import { initContext } from './PerspectiveScrollLayout.context';
 	import PerspectiveBackground from './PerspectiveBackground.svelte';
 	import PerspectiveSlide from './PerspectiveSlide.svelte';
 	import PerspectiveWrapper from '../PerspectiveWrapper.svelte';
@@ -9,9 +9,6 @@
 	export let className = '';
 
 	initContext(depth);
-	const { heights } = getContext();
-
-	$: console.log('PerspectiveScrollLayout', $heights);
 </script>
 
 <div class="preserve-3d relative h-[100vh] {className}">
