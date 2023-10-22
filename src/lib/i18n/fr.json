@@ -1,7 +1,10 @@
 {
+  "404_MESSAGE": "Il n'y a rien ici",
   "ABOUT": "A propos",
   "ACTIVITIES": "Activitées",
   "HOME": "Accueil",
+  "HOME_INTRODUCTION_TEXT": "Le cœur de la Villa est une ancienne bergerie, construite dans les années 1920, ce que l’on peut déduire de l’épaisseur importante des murs. Elle est adossée à d’anciennes constructions de pierres sèches du lieudit Casella, qui comporte tout un ensemble de Baracuns que vous pouvez visiter librement. Vous verrez, le lieu recèle un certain mystère … La villa a ensuite été agrandie et rénovée pour un usage de domicile de 1970 à nos jours. Elle dispose d’un grand salon avec un coin télé et lecture, de deux coins canapé confortables, d’une grande cuisine entièrement équipée, d’une salle de bain avec baignoire et d’une salle d’eau, de deux toilettes, et enfin de 3 chambres adultes et d’une chambre enfant de deux places. Toutes les chambres possèdent de spacieux placards.",
+  "HOME_INTRODUCTION_TITLE": "Un coin de paradis en pleine nature",
   "RENT_NOW": "Réserver ici",
   "RULES": "Règles",
   "SHORT_INTRODUCTION": "Pour vos vacances ensoleillées en Corse du Sud,\nbelle maison de 8 places à louer,\npiscine, grand parc arboré,\nplages et tous services à moins de 3km",

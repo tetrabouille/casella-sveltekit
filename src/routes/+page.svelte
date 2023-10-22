@@ -4,6 +4,7 @@
 	import PerspectiveScrollLayout from '$lib/components/PerspectiveScrollLayout/PerspectiveScrollLayout.svelte';
 	import BookNow from '$lib/components/BookNow.svelte';
 	import TeteDeMaure from '$lib/components/svg/TeteDeMaure.svelte';
+	import Carrousel from '$lib/components/Carrousel/Carrousel.svelte';
 </script>
 
 <PerspectiveScrollLayout let:PerspectiveSlide>
@@ -61,20 +62,24 @@
 		</div>
 		<div class="bg-yellow-50 py-12 px-8 flex justify-center flex-grow">
 			<div class="container">
+				<!-- <Carrousel let:CarrouselSlide>
+					<CarrouselSlide>
+						<LoadingImage
+							className="h-[600px]"
+							alt="Garden view with water-pool"
+							src={import('$lib/assets/chill_1.jpg')}
+							brightness="0.6"
+							minWidth={700}
+							offsetY={-100}
+						/>
+					</CarrouselSlide>
+				</Carrousel> -->
 				<div class="ml-auto mr-4 max-w-xl space-y-5">
 					<h2 class="font-header text-2xl md:text-4xl text-indigo-900">
-						Un coin de paradis en pleine nature
+						{$t('HOME_INTRODUCTION_TITLE')}
 					</h2>
 					<p class="font-body text-base md:text-xl text-indigo-950">
-						Le cœur de la Villa est une ancienne bergerie, construite dans les années 1920, ce que
-						l’on peut déduire de l’épaisseur importante des murs. Elle est adossée à d’anciennes
-						constructions de pierres sèches du lieudit Casella, qui comporte tout un ensemble de
-						Baracuns que vous pouvez visiter librement. Vous verrez, le lieu recèle un certain
-						mystère … La villa a ensuite été agrandie et rénovée pour un usage de domicile de 1970 à
-						nos jours. Elle dispose d’un grand salon avec un coin télé et lecture, de deux coins
-						canapé confortables, d’une grande cuisine entièrement équipée, d’une salle de bain avec
-						baignoire et d’une salle d’eau, de deux toilettes, et enfin de 3 chambres adultes et
-						d’une chambre enfant de deux places. Toutes les chambres possèdent de spacieux placards.
+						{$t('HOME_INTRODUCTION_TEXT')}
 					</p>
 				</div>
 			</div>

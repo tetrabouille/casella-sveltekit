@@ -10,6 +10,7 @@
 	class="py-1 px-3 border border-yellow-50 hover:border-yellow-100 hover:text-yellow-100 rounded-full font-body text-2xl
         w-max flex overflow-hidden hover:bg-indigo-800/50 transition-all {className}"
 	href="https://conciergeriebonifacienne.com/pf/villa-casella-location-bonifacio/"
+	target="_blank"
 	on:mouseenter={() => (hovered = true)}
 	on:mouseleave={() => (hovered = false)}
 >
