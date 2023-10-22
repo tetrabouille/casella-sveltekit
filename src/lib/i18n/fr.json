@@ -1,6 +1,10 @@
 {
-	"RULES": "Règles",
-	"ABOUT": "A propos",
-	"HOME": "Accueil",
-	"ACTIVITIES": "Activitées"
+  "ABOUT": "A propos",
+  "ACTIVITIES": "Activitées",
+  "HOME": "Accueil",
+  "RENT_NOW": "Réserver ici",
+  "RULES": "Règles",
+  "SHORT_INTRODUCTION": "Pour vos vacances ensoleillées en Corse du Sud,\nbelle maison de 8 places à louer,\npiscine, grand parc arboré,\nplages et tous services à moins de 3km",
+  "TO_VILLA_CASELLA": "à la Villa Casella",
+  "WELCOME": "Bienvenue"
 }

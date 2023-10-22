@@ -1,6 +1,9 @@
 <script>
+	import { t } from '$lib';
 	import LoadingImage from '$lib/components/LoadingImage.svelte';
 	import PerspectiveScrollLayout from '$lib/components/PerspectiveScrollLayout/PerspectiveScrollLayout.svelte';
+	import BookNow from '$lib/components/BookNow.svelte';
+	import TeteDeMaure from '$lib/components/svg/TeteDeMaure.svelte';
 </script>
 
 <PerspectiveScrollLayout let:PerspectiveSlide>
@@ -41,9 +44,18 @@
 	<PerspectiveSlide className="flex flex-col justify-stretch">
 		<div class="h-[500px]">
 			<div class="content flex justify-center bg-black/30 relative">
-				<div class="mt-14 ml-4 sm:ml-10 md:ml-20 container">
-					<h1 class="text-6xl md:text-8xl font-header text-yellow-100 font-bold">Bienvenue</h1>
-					<div class="text-2xl md:text-4xl font-header text-yellow-50">à la Villa Casella</div>
+				<div class="mt-14 mx-4 sm:mx-10 md:mx-20 container text-yellow-50 font-header">
+					<h1 class="text-6xl md:text-8xl text-yellow-100 font-bold">
+						{$t('WELCOME')}
+					</h1>
+					<div class="text-2xl md:text-4xl flex items-center gap-3">
+						<TeteDeMaure secondColor="rgb(69 26 3)" height={45} width={45} />
+						{$t('TO_VILLA_CASELLA')}
+					</div>
+					<div class="text-lg max-w-xl mt-5">
+						{$t('SHORT_INTRODUCTION')}
+					</div>
+					<BookNow className="mt-5" />
 				</div>
 			</div>
 		</div>
